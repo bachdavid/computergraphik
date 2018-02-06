@@ -1,0 +1,20 @@
+package renderEngine;
+
+import org.lwjgl.opengl.ContextAttribs;
+import org.lwjgl.opengl.Display;
+
+public class DisplayManager {
+	
+	private static final int WIDTH = 1280;
+	private static final int HEIGHT = 720;
+	
+	public static void createDisplay() {
+		
+		ContextAttribs attribs = new ContextAttribs(3,2).attribs.withForwardCompatible(true).attribs.withProfileCore(true);
+		
+		
+		Display.setDisplayMode(new DisplayMode(WIDTH,HEIGHT));
+		Display.create(new PixelFormat(), attribs)
+	}
+
+}
